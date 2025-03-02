@@ -100,7 +100,7 @@ main {
 #add-recipe input,
 #add-recipe textarea,
 #add-recipe select {
-  width: 400px; /* Fixed width */
+  width: 97%; /* Fixed width */
   padding: 10px;
   margin-top: 5px;
   border: 1px solid #555; /* Slightly lighter border */
@@ -124,7 +124,8 @@ main {
 #add-recipe input[type="checkbox"] {
   width: auto; /* Normal size */
   height: auto; /* Normal size */
-  margin-right: 10px; /* Add spacing between checkboxes */
+  margin-right: 20px; /* Add spacing between checkboxes */
+  margin-left: 1px;
 }
 
 #add-recipe button {
