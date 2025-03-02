@@ -1,0 +1,242 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black; /* Black background */
+  color: white; /* White text for better contrast */
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Center main content and set width to 50vw for both pages */
+main {
+  width: 50vw; /* 50% of viewport width */
+  margin: 20px auto; /* Center the main section */
+  padding: 20px;
+  background-color: #333; /* Dark background for main section */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+}
+
+#search-recipe {
+  margin-bottom: 20px;
+}
+
+#search-recipe input {
+  width: 400px; /* Same width as other input fields */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #444; /* Dark input background */
+  color: white; /* White text */
+}
+
+#recipe-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#recipe-list li {
+  background-color: #444; /* Dark background for recipe cards */
+  margin: 10px 0;
+  padding: 20px;
+  border: 1px solid #555; /* Slightly lighter border */
+  border-radius: 5px;
+  position: relative; /* For delete button positioning */
+}
+
+#recipe-list img {
+  width: 200px; /* Fixed width */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Ensures the image fits within the dimensions */
+  border-radius: 5px;
+}
+
+#recipe-list .delete-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#recipe-list .delete-button:hover {
+  background-color: #cc0000;
+}
+
+#add-recipe form {
+  background-color: #444; /* Dark background for form */
+  padding: 20px;
+  border: 1px solid #555; /* Slightly lighter border */
+  border-radius: 5px;
+}
+
+#add-recipe label {
+  display: block;
+  margin-top: 10px;
+  color: white; /* White text for labels */
+}
+
+#add-recipe input,
+#add-recipe textarea,
+#add-recipe select {
+  width: 400px; /* Fixed width */
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #555; /* Slightly lighter border */
+  border-radius: 5px;
+  background-color: #555; /* Dark input background */
+  color: white; /* White text */
+  resize: none; /* Prevent resizing */
+}
+
+#add-recipe input[type="text"],
+#add-recipe input[type="number"],
+#add-recipe select {
+  height: auto; /* Reset height for non-textarea inputs */
+}
+
+#add-recipe textarea {
+  height: 200px; /* Fixed height for textareas */
+}
+
+/* Dietary checkboxes - normal size */
+#add-recipe input[type="checkbox"] {
+  width: auto; /* Normal size */
+  height: auto; /* Normal size */
+  margin-right: 10px; /* Add spacing between checkboxes */
+}
+
+#add-recipe button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#add-recipe button:hover {
+  background-color: #555;
+}
+
+/* Ensure the recipe-course dropdown has the same width as other inputs */
+#recipe-course {
+  width: 400px; /* Same width as other input fields */
+}
+
+/* Styles for the All Recipes page */
+#all-recipes {
+  text-align: center;
+}
+
+#recipe-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.recipe-card {
+  width: 150px; /* Fixed width */
+  height: 240px; /* Fixed height */
+  background-color: #444; /* Dark background for cards */
+  border: 1px solid #555; /* Slightly lighter border */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer; /* Indicates the card is clickable */
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Ensures the image fits within the dimensions */
+  border-radius: 5px;
+}
+
+.recipe-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.recipe-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+.modal-content {
+  background-color: #333;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #555;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close {
+  color: #fff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ccc;
+}
+
+#modal-recipe-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#modal-recipe-ingredients,
+#modal-recipe-directions {
+  padding-left: 20px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Recipes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Recipe Website</h1>
+      <nav>
+        <a href="add-recipe.html">Add Recipe</a>
+        <a href="all-recipes.html">All Recipes</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="search-recipe">
+        <h2>Search Recipes</h2>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search by recipe name..."
+        />
+      </section>
+
+      <section id="recipe-list">
+        <h2>Recipes</h2>
+        <ul id="recipes" style="display: none"></ul>
+        <!-- Hidden by default -->
+      </section>
+    </main>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

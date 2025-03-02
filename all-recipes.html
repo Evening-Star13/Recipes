@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Recipes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>All Recipes</h1>
+      <nav>
+        <a href="index.html">View Recipes</a>
+        <a href="add-recipe.html">Add Recipe</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="all-recipes">
+        <h2>All Recipes</h2>
+        <div id="recipe-cards"></div>
+        <!-- Container for recipe cards -->
+      </section>
+    </main>
+
+    <!-- Modal for displaying full recipe details -->
+    <div id="recipe-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-recipe-name"></h2>
+        <p><strong>Course:</strong> <span id="modal-recipe-course"></span></p>
+        <p>
+          <strong>Dietary Options:</strong> <span id="modal-recipe-diet"></span>
+        </p>
+        <p>
+          <strong>Cook Time:</strong>
+          <span id="modal-recipe-cook-time"></span> minutes
+        </p>
+        <img id="modal-recipe-image" src="" alt="" />
+        <p><strong>Ingredients:</strong></p>
+        <ul id="modal-recipe-ingredients"></ul>
+        <p><strong>Directions:</strong></p>
+        <ol id="modal-recipe-directions"></ol>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

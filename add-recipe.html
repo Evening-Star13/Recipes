@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Recipe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Add a New Recipe</h1>
+      <nav>
+        <a href="index.html">Search Recipes</a>
+        <a href="all-recipes.html">All Recipes</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="add-recipe">
+        <form id="recipe-form">
+          <label for="recipe-name">Recipe Name:</label>
+          <input type="text" id="recipe-name" required />
+
+          <label for="recipe-course">Course:</label>
+          <select id="recipe-course" required>
+            <option value="Appetizer">Appetizer</option>
+            <option value="Salad">Salad</option>
+            <option value="Soup">Soup</option>
+            <option value="Entree">Entree</option>
+            <option value="Dessert">Dessert</option>
+          </select>
+
+          <label for="recipe-diet">Dietary Options:</label>
+          <div>
+            <input type="checkbox" id="vegetarian" value="Vegetarian" />
+            Vegetarian
+            <input type="checkbox" id="peanut-free" value="Peanut Free" />
+            Peanut Free
+            <input type="checkbox" id="gluten-free" value="Gluten Free" />
+            Gluten Free
+          </div>
+
+          <label for="cook-time">Cook Time (minutes):</label>
+          <input type="number" id="cook-time" required />
+
+          <label for="ingredients">Ingredients:</label>
+          <textarea id="ingredients" required></textarea>
+
+          <label for="directions">Cooking Directions:</label>
+          <textarea id="directions" required></textarea>
+
+          <label for="recipe-image">Upload Image:</label>
+          <input type="file" id="recipe-image" accept="image/*" required />
+
+          <button type="submit">Add Recipe</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
